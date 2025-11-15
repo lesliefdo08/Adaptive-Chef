@@ -582,83 +582,8 @@ async def process_request(user_input, session_id):
 
 ---
 
-## 🏆 Scoring Breakdown
 
-### Target: 100/100 Points
 
-| Category | Points | Status | Details |
-|----------|--------|--------|---------|
-| **Problem & Solution** | 15/15 | ✅ | Clear problem, innovative solution, strong value prop |
-| **Writeup Quality** | 15/15 | ✅ | Comprehensive README, architecture diagrams, examples |
-| **Technical Implementation** | 50/50 | ✅ | 5 key concepts, clean code, thorough comments |
-| **Documentation** | 20/20 | ✅ | Complete setup guide, deployment docs, diagrams |
-| **BONUS: Gemini Model** | +5 | ✅ | Uses Gemini 2.0 Flash |
-| **BONUS: Deployment** | +5 | ✅ | Agent Engine + Cloud Run configs |
-| **BONUS: Demo Video** | +10 | ✅ | 3-min YouTube video |
-| **TOTAL** | **100** | ✅ | **Maximum Score** |
-
-### Key Differentiators
-
-✅ **Exceeds Requirements**: 5 key concepts (requirement: 3)  
-✅ **Production-Ready**: Complete evaluation suite, deployment configs  
-✅ **Comprehensive Docs**: Architecture diagrams, usage examples, troubleshooting  
-✅ **All Bonus Points**: Gemini + Deployment + Video = 20 bonus pts  
-✅ **Real-World Problem**: Everyone relates to meal planning struggles  
-✅ **Technical Excellence**: Loop agent, LRO, Memory Bank all demonstrated  
-
----
-
-## 📹 Demo Video
-
-**Duration:** 2:58  
-**YouTube Link:** [YOUR_LINK_HERE]
-
-### Video Structure
-
-```
-00:00-00:30 → Problem Statement
-              "Meal planning wastes 2-3 hours weekly..."
-
-00:30-01:00 → Why Agents?
-              "Agents can iteratively refine plans, learn preferences..."
-
-01:00-01:30 → Architecture Walkthrough
-              [Show diagram, explain multi-agent system]
-
-01:30-02:30 → Live Demo
-              • Set preferences: "I'm vegan, allergic to peanuts"
-              • Add pantry items
-              • Generate meal plan
-              • **Show LRO approval flow** ⏸️
-              • Approve plan ✅
-
-02:30-02:58 → Technical Highlights
-              "Built with Google ADK, Gemini 2.0, deployed on Agent Engine"
-```
-
----
-
-## 🔮 Future Enhancements
-
-### Phase 2 (Post-Competition)
-
-- [ ] **Nutrition API Integration** - Real-time nutritional data
-- [ ] **Recipe Database** - 10,000+ recipes with ratings
-- [ ] **Shopping List Generation** - Auto-create grocery lists
-- [ ] **Calendar Integration** - Sync with Google Calendar
-- [ ] **Multi-user Households** - Family meal planning
-- [ ] **Cost Optimization** - Budget-aware meal planning
-- [ ] **Meal Prep Guidance** - Batch cooking instructions
-
-### Phase 3 (Production)
-
-- [ ] **Mobile App** - iOS/Android with push notifications
-- [ ] **Voice Interface** - "Hey Google, plan my meals"
-- [ ] **Smart Home Integration** - Recipe display on smart displays
-- [ ] **Community Features** - Share meal plans, rate recipes
-- [ ] **AI Nutritionist** - Personalized health recommendations
-
----
 
 ## 🤝 Contributing
 
@@ -666,7 +591,7 @@ This is a capstone project, but feedback is welcome!
 
 ```bash
 # Fork the repository
-git fork https://github.com/YOUR_USERNAME/adaptive-chef
+git fork https://github.com/lesliefdo08/adaptive-chef
 
 # Create feature branch
 git checkout -b feature/amazing-feature
@@ -691,27 +616,6 @@ MIT License - See [LICENSE](LICENSE) file for details
 - **Google AI Team** - For the amazing 5-Day Agents Intensive Course
 - **Kaggle Community** - For inspiration and collaboration
 - **ADK Contributors** - For building such a powerful framework
-
----
-
-## 📧 Contact
-
-**Leslie Fernando**  
-📧 Email: your.email@example.com  
-🐦 Twitter: [@yourhandle](https://twitter.com/yourhandle)  
-💼 LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)  
-🌐 GitHub: [@yourusername](https://github.com/yourusername)
-
----
-
-## ⭐ Star This Project!
-
-If you found this helpful for your capstone project, please star the repository!
-
-```bash
-# Clone and adapt for your own project
-git clone https://github.com/YOUR_USERNAME/adaptive-chef
-```
 
 ---
 
