@@ -1,13 +1,11 @@
 # The Adaptive Chef - Requirements
 # Python 3.10+ required
 
-# Core ADK and Gemini dependencies
-google-genai>=1.0.0
-google-adk>=0.1.0
+# Core ADK dependency (includes google-genai)
+google-adk>=1.18.0
 
-# Additional utilities (if needed)
+# Additional utilities
 python-dotenv>=1.0.0
-pydantic>=2.0.0
 
 # For deployment (optional)
 gunicorn>=21.0.0
