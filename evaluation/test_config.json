@@ -1,0 +1,50 @@
+{
+  "evaluation_config": {
+    "name": "Adaptive Chef Test Configuration",
+    "version": "1.0.0",
+    "description": "Configuration for running ADK evaluation suite"
+  },
+  
+  "agent": {
+    "entry_point": "agent.py",
+    "agent_name": "root_agent",
+    "model": "gemini-2.0-flash-exp"
+  },
+  
+  "execution": {
+    "timeout_seconds": 120,
+    "max_retries": 2,
+    "parallel_execution": false,
+    "verbose_logging": true
+  },
+  
+  "evaluation_criteria": {
+    "automatic_scoring": {
+      "enabled": true,
+      "llm_judge": "gemini-2.0-flash-exp",
+      "scoring_prompt": "Evaluate if the agent response meets the expected behavior criteria. Score each criterion as pass/fail."
+    },
+    
+    "human_review": {
+      "enabled": false,
+      "required_for": ["test_004", "test_005"]
+    }
+  },
+  
+  "output": {
+    "format": "json",
+    "save_to": "evaluation/results/",
+    "include_agent_traces": true,
+    "include_timing_data": true
+  },
+  
+  "thresholds": {
+    "minimum_pass_rate": 0.75,
+    "minimum_weighted_score": 7.5
+  },
+  
+  "environment": {
+    "required_env_vars": ["GOOGLE_API_KEY"],
+    "session_isolation": true
+  }
+}

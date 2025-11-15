@@ -1,0 +1,187 @@
+{
+  "name": "The Adaptive Chef - Evaluation Suite",
+  "description": "Comprehensive test cases for meal planning agent functionality",
+  "version": "1.0.0",
+  "test_cases": [
+    {
+      "id": "test_001",
+      "name": "Dietary Preferences Setup",
+      "description": "Test ability to capture and store dietary restrictions",
+      "input": "I'm vegan and allergic to peanuts. I also don't like mushrooms.",
+      "expected_behavior": [
+        "Identifies vegan dietary restriction",
+        "Records peanut allergy",
+        "Notes mushroom dislike",
+        "Confirms preferences stored",
+        "Friendly acknowledgment"
+      ],
+      "evaluation_criteria": {
+        "captures_dietary_restriction": true,
+        "captures_allergy": true,
+        "captures_dislikes": true,
+        "confirms_storage": true
+      },
+      "weight": 1.0
+    },
+    {
+      "id": "test_002",
+      "name": "Pantry Management - Add Items",
+      "description": "Test pantry inventory addition",
+      "input": "Add rice, black beans, tomatoes, spinach, and olive oil to my pantry",
+      "expected_behavior": [
+        "Uses pantry tool to add items",
+        "Confirms all 5 items added",
+        "Provides clear confirmation message",
+        "Updates inventory correctly"
+      ],
+      "evaluation_criteria": {
+        "uses_pantry_tool": true,
+        "adds_all_items": true,
+        "provides_confirmation": true
+      },
+      "weight": 1.0
+    },
+    {
+      "id": "test_003",
+      "name": "Pantry Management - List Items",
+      "description": "Test pantry inventory listing",
+      "input": "What's in my pantry?",
+      "expected_behavior": [
+        "Uses list_pantry tool",
+        "Shows all added items",
+        "Clear, organized format",
+        "Accurate inventory count"
+      ],
+      "evaluation_criteria": {
+        "retrieves_items": true,
+        "organized_output": true,
+        "accurate_count": true
+      },
+      "weight": 1.0
+    },
+    {
+      "id": "test_004",
+      "name": "Simple Meal Plan Generation",
+      "description": "Test basic meal plan creation with constraints",
+      "input": "Create a 2-day vegan meal plan using items from my pantry. Keep it simple and healthy.",
+      "expected_behavior": [
+        "Generates 2-day meal plan",
+        "Respects vegan restriction",
+        "Uses pantry ingredients",
+        "Includes breakfast, lunch, dinner for each day",
+        "Provides recipes with ingredients and instructions",
+        "No peanuts or mushrooms used",
+        "Triggers LRO approval flow"
+      ],
+      "evaluation_criteria": {
+        "correct_duration": true,
+        "respects_dietary_restrictions": true,
+        "uses_pantry_items": true,
+        "complete_meals": true,
+        "includes_recipes": true,
+        "no_allergens": true,
+        "lro_triggered": true
+      },
+      "weight": 2.0
+    },
+    {
+      "id": "test_005",
+      "name": "Complex Meal Plan with Multiple Constraints",
+      "description": "Test meal planning with multiple constraints and preferences",
+      "input": "Generate a 3-day meal plan. I want high-protein vegan meals, under 500 calories per meal, using my pantry items. Include prep time for each meal.",
+      "expected_behavior": [
+        "Generates 3-day plan",
+        "High-protein vegan meals",
+        "Calorie estimates provided",
+        "Uses available ingredients",
+        "Prep time included",
+        "Balanced nutrition",
+        "Creative variety",
+        "Loop agent refinement (multiple iterations if needed)",
+        "LRO approval"
+      ],
+      "evaluation_criteria": {
+        "meets_duration": true,
+        "high_protein_focus": true,
+        "calorie_awareness": true,
+        "prep_time_included": true,
+        "uses_pantry": true,
+        "variety_demonstrated": true,
+        "loop_refinement": true,
+        "lro_approval": true
+      },
+      "weight": 2.0
+    },
+    {
+      "id": "test_006",
+      "name": "Memory and Context Retention",
+      "description": "Test agent's ability to remember previous interactions",
+      "input": "Create another meal plan for tomorrow, but make it different from the last one",
+      "expected_behavior": [
+        "Recalls previous meal plan from history",
+        "Generates new, different meals",
+        "Maintains dietary restrictions",
+        "No repetition of previous meals",
+        "Uses memory bank effectively"
+      ],
+      "evaluation_criteria": {
+        "accesses_memory": true,
+        "avoids_repetition": true,
+        "maintains_context": true,
+        "respects_constraints": true
+      },
+      "weight": 1.5
+    },
+    {
+      "id": "test_007",
+      "name": "Error Handling - Empty Pantry",
+      "description": "Test graceful handling when pantry is insufficient",
+      "input": "Create a 5-day gourmet meal plan with exotic ingredients",
+      "expected_behavior": [
+        "Identifies limited pantry items",
+        "Provides helpful suggestions",
+        "Offers alternatives",
+        "Doesn't hallucinate ingredients",
+        "Clear communication about limitations"
+      ],
+      "evaluation_criteria": {
+        "recognizes_limitations": true,
+        "provides_suggestions": true,
+        "no_hallucination": true,
+        "helpful_response": true
+      },
+      "weight": 1.0
+    },
+    {
+      "id": "test_008",
+      "name": "Tool Integration - Pantry Removal",
+      "description": "Test removing items after meal preparation",
+      "input": "Remove rice and tomatoes from my pantry since I used them",
+      "expected_behavior": [
+        "Uses remove_from_pantry tool",
+        "Successfully removes specified items",
+        "Confirms removal",
+        "Updates inventory"
+      ],
+      "evaluation_criteria": {
+        "uses_removal_tool": true,
+        "removes_correct_items": true,
+        "confirms_action": true
+      },
+      "weight": 1.0
+    }
+  ],
+  "metadata": {
+    "total_tests": 8,
+    "total_weight": 10.5,
+    "key_concepts_tested": [
+      "Multi-agent system (LoopAgent)",
+      "Custom tools (Pantry management)",
+      "Long-running operations (LRO approval)",
+      "Memory Bank (preferences & history)",
+      "Sessions & State Management"
+    ],
+    "expected_pass_rate": 0.875,
+    "average_execution_time": "45-90 seconds per test"
+  }
+}
