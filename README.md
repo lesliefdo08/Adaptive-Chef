@@ -6,7 +6,7 @@
 
 **An intelligent meal planning agent that learns your preferences, manages your pantry, and creates personalized meal plans using Google's ADK and Gemini AI.**
 
-🎥 **[Watch Demo Video](YOUR_YOUTUBE_LINK_HERE)** _(< 3 minutes)_
+🎥 **[Watch Demo Video](https://youtu.be/rx9eeSvHLgk)** _(< 3 minutes)_
 
 ---
 
@@ -60,7 +60,21 @@ Modern individuals face multiple meal planning challenges:
 
 ## 🏗️ Architecture
 
-### High-Level Overview
+### Visual Architecture Diagrams
+
+<p align="center">
+  <img src="docs/images/Architecture for adaptive chef.png" alt="Agent Flow Diagram" width="700"/>
+  <br/>
+  <em>Figure 1: Multi-Agent Flow - User Interface → Root Agent → Specialized Agents → LRO</em>
+</p>
+
+<p align="center">
+  <img src="docs/images/Component Arch for Adaptive chef.png" alt="System Components" width="700"/>
+  <br/>
+  <em>Figure 2: System Components - Memory Bank, Session Service, Custom Tools, Observability</em>
+</p>
+
+### High-Level Overview (Text Diagram)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -232,7 +246,7 @@ Generate Meal Plan → Pause → Wait for Approval → Resume
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/adaptive-chef.git
+git clone https://github.com/lesliefdo08/Adaptive-Chef.git
 cd adaptive-chef
 
 # 2. Create virtual environment
