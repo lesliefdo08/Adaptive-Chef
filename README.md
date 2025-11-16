@@ -6,7 +6,7 @@
 
 **An intelligent meal planning agent that learns your preferences, manages your pantry, and creates personalized meal plans using Google's ADK and Gemini AI.**
 
-🎥 **[Watch Demo Video](https://youtu.be/rx9eeSvHLgk)** _(< 3 minutes)_
+🎥 **[Watch Demo Video](https://youtu.be/tX3UOb6fnyk)** _(< 3 minutes)_
 
 ---
 
